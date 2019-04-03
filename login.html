@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<title>Tela de Login</title>
+
+	<meta charset="utf-8">
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+	<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="css/estilo.css">
+
+	<link rel="icon" href="img/oculos_barba.jpg">
+
+</head>
+
+<body>
+	<!-- Menu com bootstrap -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+		<a class="navbar-brand" href="#">SubDev's</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a href="index.html" alt="logo-home">
+						<img src="img/oculos_barba.jpg" alt="logo" style="width: 30px;">
+					</a>
+				</li>
+				<!-- Menu -->
+				<div class="dropdown" id="dropId">
+					<button onclick="myFunction()" class="dropbtn">
+						Menu
+					</button>
+					<div id="myDropdown" class="dropdown-content">
+						<a href="index.html">Home</a>
+						<a href="#about">Sobre</a>
+						<a href="regras.html">Regras</a>
+
+					</div>
+				</div>
+			</ul>
+		</div>
+	</nav>
+
+
+
+	<!-- ratios de transição entre logar e cadastrar -->
+	<div class="tela-login">
+		<div class="login-html">
+			<input id="tab-1" type="radio" name="tab" class="logar" checked>
+			<label for="tab-1" class="tab">Fazer login</label>
+
+			<input id="tab-2" type="radio" name="tab" class="cadastrar">
+			<label for="tab-2" class="tab">Cadastrar</label>
+
+			<!-- Login de usuário -->
+			<div class="login-form">
+				<div class="logar-htm">
+					<div class="group">
+						<label for="user" class="label">Nome de usuário</label>
+						<input id="user" type="text" class="input">
+					</div>
+					<div class="group">
+						<label for="pass" class="label">Senha</label>
+						<input id="pass" type="password" class="input" data-type="password">
+					</div>
+					<div class="group">
+						<input id="check" type="checkbox" class="check" checked>
+						<label for="check"><span class="icon"></span> Mantenha-me conectado</label>
+					</div>
+					<div class="group" id="btn">
+						<button type="button" class="btn btn-primary">Entrar</button>
+						<a href="index.html" class="btn btn-primary " role="button" aria-pressed="true">Voltar</a>
+					</div>
+					<div class="foot-lnk">
+						<a href="#esqueceu">Esqueceu a senha?</a>
+					</div>
+				</div>
+
+				<!-- Cadastramento de usuário -->
+				<div class="cadastrar-htm">
+					<div class="group">
+						<label for="user" class="label">Nome de usuário</label>
+						<input id="user" type="text" class="input">
+					</div>
+					<div class="group">
+						<label for="pass" class="label">Senha</label>
+						<input id="pass" type="password" class="input" data-type="password">
+					</div>
+					<div class="group">
+						<label for="pass" class="label">Repita a senha</label>
+						<input id="pass" type="password" class="input" data-type="password">
+					</div>
+					<div class="group">
+						<label for="pass" class="label">Endereço de email</label>
+						<input id="pass" type="text" class="input">
+					</div>
+					<div class="group">
+						<input type="submit" class="button" value="Cadastrar">
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<!-- Rodapé da pagina -->
+		<div class="footer-copyright text-center py-3" id="rodape">
+			© 2019 Copyright: SubDev's
+		</div>
+
+	</footer>
+
+	<script>
+		// quando clicar uma vez, mostra os elementos do dropdown
+		function myFunction() {
+			document.getElementById("myDropdown").classList.toggle("show");
+		}
+		// quando clicado outra vez, minimiza os elementos de dropdown
+		window.onclick = function (event) {
+			if (!event.target.matches('.dropbtn')) {
+				var dropdowns = document.getElementsByClassName("dropdown-content");
+				var i;
+				for (i = 0; i < dropdowns.length; i++) {
+					var openDropdown = dropdowns[i];
+					if (openDropdown.classList.contains('show')) {
+						openDropdown.classList.remove('show');
+					}
+				}
+			}
+		}
+	</script>
+</body>
+
+</html>

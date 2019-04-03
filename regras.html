@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Regras - SubDev´s</title>
+	<meta charset="utf-8">
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+	<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="css/estilo.css">
+
+	<link rel="icon" href="img/oculos_barba.jpg">
+
+</head>
+
+<body>
+	<!-- Menu com bootstrap -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+		<a class="navbar-brand" href="#">SubDev's</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a href="index.html" alt="logo-home">
+						<img src="img/oculos_barba.jpg" alt="logo" style="width: 30px;">
+					</a>
+				</li>
+				<!-- Menu -->
+				<div class="dropdown" id="dropId">
+					<button onclick="myFunction()" class="dropbtn">
+						Menu
+					</button>
+					<div id="myDropdown" class="dropdown-content">
+						<a href="index.html">Home</a>
+						<a href="#about">Sobre</a>
+						<a href="#contact">Regras</a>
+
+					</div>
+				</div>
+			</ul>
+		</div>
+	</nav>
+	<h1 class="titulo-principal">Regras</h1>
+
+	<div class="container">
+		<p>Pode ser texto introdutório.</p>
+
+		<p>.</p>
+
+		<h2 class="subtitulo-texto">1</h2>
+
+		<blockquote class="exemplo-foto 1">
+			<p>FOTO AQUI !</p>
+		</blockquote>
+
+		<p>.</p>
+
+		<p></p>
+
+		<h2 class="subtitulo-texto">2</h2>
+
+		<blockquote class="exemplo-foto 2">
+			<p>FOTO AQUI !</p>
+		</blockquote>
+
+		<p>.</p>
+
+		<p>.</p>
+
+		<h2 class="subtitulo-texto">3</h2>
+
+		<p></p>
+	</div>
+
+	<footer>
+		<!-- Rodapé da pagina -->
+		<div class="footer-copyright text-center py-3" id="rodape">
+			© 2019 Copyright: SubDev's
+		</div>
+
+	</footer>
+
+	<script>
+		// quando clicar uma vez, mostra os elementos do dropdown
+		function myFunction() {
+			document.getElementById("myDropdown").classList.toggle("show");
+		}
+		// quando clicado outra vez, minimiza os elementos de dropdown
+		window.onclick = function (event) {
+			if (!event.target.matches('.dropbtn')) {
+				var dropdowns = document.getElementsByClassName("dropdown-content");
+				var i;
+				for (i = 0; i < dropdowns.length; i++) {
+					var openDropdown = dropdowns[i];
+					if (openDropdown.classList.contains('show')) {
+						openDropdown.classList.remove('show');
+					}
+				}
+			}
+		}
+	</script>
+</body>
+
+</html>

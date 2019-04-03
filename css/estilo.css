@@ -1,0 +1,324 @@
+body{
+	margin:0;
+	color:#6a6f8c;
+	background:rgba(191, 196, 197, 0); 
+	/* background:url(../img/background.png) no-repeat center; */
+	font:600 16px/18px 'Open Sans',sans-serif;
+}
+
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
+
+.home{
+	position: relative;
+	left: 5px;
+	display: block;
+	/* box-sizing: border-box; */
+	/* background-color: aquamarine; */
+	margin-top: 100px;
+	margin-left: 600px;
+	margin-right: 500px;
+	padding-bottom: 200px;
+}
+.home img{
+	width: 20%;
+	float: left;
+}
+.home #btn{ 
+	padding: 20px;
+	margin: 20px 110px
+}
+#btn{
+	clear: both;
+	margin: 30px 110px;	
+	
+}
+.home h2{
+	font-size: 100px;
+	padding-top: 50px;
+	padding-left: 200px;
+}
+
+.dropbtn {
+    background-color:transparent;
+    color: black;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color:whitesmoke;
+  }
+  #dropId{
+    position: fixed;
+    top: 3px;
+	right: 30px;
+	padding-bottom: 10px;
+  }
+  .dropdown {
+    position: fixed;
+    top: 5px;
+    right: 10px;
+    
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFFAFA;
+    min-width: 16px;
+    overflow: auto;
+    box-shadow: gray;
+    /* z-index: 1; */
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+.dropdown a:hover {
+	  background-color: lightskyblue;
+	}
+  
+.show {
+	  display: block;
+	}
+.logo .logo-nome{
+	list-style-type: none;
+}
+#text_footer{
+	position: fixed;
+	display: inline;
+	left: 50px;
+	border-bottom: 10px;
+}
+
+.tela-login, .telha-escolha{
+	border-top: 50px;
+	width:100%;
+	margin:auto;
+	max-width:525px;
+	min-height:670px;
+	position:relative;
+	background-color: transparent;
+	/* background:url(../img/background.png) no-repeat center; */
+	
+	/* box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19); */
+}
+
+.login-html, .escolha-html{
+	width:100%;
+	height:100%;
+	position:absolute;
+	padding:90px 70px 50px 70px;
+	background-color: transparent;
+	/* background:rgba(129, 161, 202, 0.9); */
+}
+.login-html .logar-htm
+{
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:fixed;
+	-webkit-transform:rotateY(200deg);
+	        transform:rotateY(200deg);
+	-webkit-backface-visibility:hidden;
+	        backface-visibility:hidden;
+	transition:all .4s ease-in;
+}
+.login-html .cadastrar-htm
+{
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:fixed;
+	-webkit-transform:rotateY(200deg);
+	        transform:rotateY(200deg);
+	-webkit-backface-visibility:hidden;
+	        backface-visibility:hidden;
+	transition:all .6s ease-in-out;
+}
+.login-html .logar,
+.login-html .cadastrar,
+.login-form .group .check{
+	display:none;
+}
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button{
+	text-transform:uppercase;
+}
+.login-html .tab{
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 0;
+	display:inline-block;
+	border-bottom:2px solid transparent;
+}
+.login-html .logar:checked + .tab,
+.login-html .cadastrar:checked + .tab{
+	color: black;
+	border-color:#1161ee;
+}
+.login-form{ 
+	min-height:345px;
+	position:relative;
+	-webkit-perspective:1000px;
+	        perspective:1000px;
+	-webkit-transform-style:flat;
+	        transform-style:flat;
+}
+.login-form .group{
+	margin-bottom:15px;
+}
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button{
+	width:100%;
+	color:black;
+	display:block;
+}
+.login-form .group .input,
+.login-form .group .button{
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(77, 109, 117, 0.1);
+}
+.login-form .group input[data-type="password"]{
+	text-security: circle;
+	-webkit-text-security:circle;
+}
+.login-form .group .label{
+	color:black;
+	font-size:12px;
+}
+.login-form .group .button{
+	background:#1161ee;
+}
+.login-form .group label .icon{
+	width:15px;
+	height:15px;
+	border-radius:2px;
+	position:relative;
+	display:inline-block;
+	background:rgba(255,255,255,.1);
+}
+.login-form .group label .icon:before,
+.login-form .group label .icon:after{
+	content:'';
+	width:10px;
+	height:2px;
+	background:#fff;
+	position:absolute;
+	transition:all .2s ease-in-out 0s;
+}
+.login-form .group label .icon:before{
+	left:3px;
+	width:5px;
+	bottom:6px;
+	-webkit-transform:scale(0) rotate(0);
+	        transform:scale(0) rotate(0);
+}
+.login-form .group label .icon:after{
+	top:6px;
+	right:0;
+	-webkit-transform:scale(0) rotate(0);
+	        transform:scale(0) rotate(0);
+}
+.login-form .group .check:checked + label{
+	color:black;
+}
+
+.login-form .group .check:checked + label .icon{
+	background:#1161ee;
+}
+.login-form .group .check:checked + label .icon:after{
+	-webkit-transform:scale(1) rotate(-45deg);
+	        transform:scale(1) rotate(-45deg);
+}
+.login-html .logar:checked + .tab + .cadastrar + .tab + .login-form .logar-htm{
+	-webkit-transform:rotate(0);
+	        transform:rotate(0);
+}
+.login-html .cadastrar:checked + .tab + .login-form .cadastrar-htm{
+	-webkit-transform:rotate(0);
+	        transform:rotate(0);
+}
+
+
+.foot-lnk{
+	text-align:center;
+}
+
+footer #rodape{
+	clear: both;
+	position: static;
+	border-bottom: black;
+	display: inline;
+	color: whitesmoke;
+	position: fixed;
+	border-bottom: 20px;
+}
+nav .navbar {
+	background-color: #FFFFF0;
+}
+
+.titulo-principal {
+	text-align: center;
+	border-bottom-style: solid 50px;
+	box-sizing: border-box;
+	
+}
+
+p {
+	text-align: justify;
+	margin: 20px 0;
+}
+
+.exemplo-foto {
+	background-color: rgb(175, 209, 231);
+	border: 10px solid rgb(52, 61, 68);
+	width: 250px;
+	box-sizing: border-box;
+	margin: 20px 40px;
+	padding: 10px;
+}
+
+
+.home #vai{
+	box-sizing: 100px;
+	margin-top: 4.7px;
+	margin-left: 500px;
+	margin-right: 500px;
+}
+
+.logo-home{
+	top: 4.7%;
+	left: 600px;
+	width:15%;	
+	
+}
+.home .logo-nome{
+	float: right;
+	font-size: 880px;
+
+}
+.btn-cad{
+	clear: both;
+}
+
+#btn-pesquisa{
+	box-sizing: 500px;
+	
+}

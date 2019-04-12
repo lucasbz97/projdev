@@ -1,19 +1,14 @@
-<!DOCTYPE html>
 <html>
 
 <head>
-    <title>Home - SubDev's</title>
-
     <meta charset="utf-8">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/estilo.css">
-
     <link rel="icon" href="img/oculos_barba.jpg">
 </head>
 
 <body>
-    <!-- Menu com bootstrap -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
         <a class="navbar-brand" href="#">SubDev's</a>
@@ -40,13 +35,49 @@
             </ul>
         </div>
     </nav>
+    <div class="home">
+        <div class="container d-flex">
+            <div class="row">
 
-    <div class="home col-lg-12 col-md-8 col-sm-6 col-xs-2" id="vai">
-        <img class="col-md-12" src="img/oculos_barba.jpg" alt="Logo" />
-        <h2 class="nome-logo col-md-12">SubDev's</h2>
-        <div class="button-h" id="btn">
-            <a href="login.html" class="btn btn-primary" role="button" aria-pressed="true">Fazer Cadastro e Login</a>
-            <a href="sala.html" class="btn btn-primary" role="button" aria-pressed="true">Entrar em uma sala </a>
+
+                <section>
+                    <table class="table">
+                        <thead class="thead-light">
+                            <tr>
+                                <th class="th">#</th>
+                                <th class="th col-md-12">Nome</th>
+                                <th class="th">Pontos</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            <tr>
+                                <td>1</td>
+                                <td>nome1</td>
+                                <td>
+                                    <div class="pts" style="text-align: center;width:300px;height: 20px;Background-color:blue">3000
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>nome2</td>
+                                <td>
+                                    <div class="pts" style="text-align: center;width:200px;height: 20px;Background-color:green">2000
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>nome3</td>
+                                <td>
+                                    <div class="pts" style="text-align: center;width:100px;height: 20px;Background-color:red">1000
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
         </div>
     </div>
 
@@ -70,7 +101,6 @@
             }
         }
     </script>
-
 </body>
 
 </html>

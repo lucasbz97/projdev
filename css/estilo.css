@@ -1,7 +1,10 @@
+
+
 *,:after,:before{box-sizing:border-box}
 .clearfix:after,.clearfix:before{content:'';display:table}
 .clearfix:after{clear:both;display:block}
 a{color:inherit;text-decoration:none}
+
 
 body{
 	margin:0;
@@ -10,6 +13,7 @@ body{
 	/* background:url(../img/background.png) no-repeat center; */
 	font:600 16px/18px 'Open Sans',sans-serif;
 }
+
 
 
 .principal{
@@ -37,6 +41,7 @@ body{
 }
 
 #page{
+
 	margin: 0 auto;
 	margin-top: 100px;
 	width: 80%;
@@ -45,6 +50,12 @@ body{
 .pts{
 	border-radius: 20px;
 }
+
+
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
 
 .home{
 	width: 60%;
@@ -76,9 +87,11 @@ body{
 }
 
 #jogo{
-	max-width:1200px;
+	max-width:625px;
 }
-
+#jogo ul{
+	top: 20px;
+}
 
 .questoes{
 	text-align: center;
@@ -107,6 +120,7 @@ body{
 	font-size: 80px;
 	text-align: center;
 	top: 40px;
+
 }
 
 .dropbtn {
@@ -121,7 +135,6 @@ body{
   .dropbtn:hover, .dropbtn:focus {
     background-color:whitesmoke;
   }
-
   #dropId{
     position: fixed;
     top: 3px;
@@ -169,6 +182,7 @@ body{
 	border-bottom: 10px;
 }
 
+ 
 .tela-login, .telha-escolha{
 	border-top: 50px;
 	width:100%;
@@ -190,7 +204,6 @@ body{
 	background-color: transparent;
 	/* background:rgba(129, 161, 202, 0.9); */
 }
-
 .login-html .logar-htm
 {
 	top:0;
@@ -204,7 +217,6 @@ body{
 	        backface-visibility:hidden;
 	transition:all .4s ease-in;
 }
-
 .login-html .cadastrar-htm
 {
 	top:0;
@@ -218,19 +230,16 @@ body{
 	        backface-visibility:hidden;
 	transition:all .6s ease-in-out;
 }
-
 .login-html .logar,
 .login-html .cadastrar,
 .login-form .group .check{
 	display:none;
 }
-
 .login-html .tab,
 .login-form .group .label,
 .login-form .group .button{
 	text-transform:uppercase;
 }
-
 .login-html .tab{
 	font-size:22px;
 	margin-right:15px;
@@ -239,13 +248,11 @@ body{
 	display:inline-block;
 	border-bottom:2px solid transparent;
 }
-
 .login-html .logar:checked + .tab,
 .login-html .cadastrar:checked + .tab{
 	color: black;
 	border-color:#1161ee;
 }
-
 .login-form{ 
 	min-height:345px;
 	position:relative;
@@ -254,7 +261,6 @@ body{
 	-webkit-transform-style:flat;
 	        transform-style:flat;
 }
-
 .login-form .group{
 	margin-bottom:15px;
 }
@@ -262,11 +268,11 @@ body{
 .login-form .group .input,
 .login-form .group .button{
 	width:100%;
+ 
 	color:black;
 	color:white;
 	display:block;
 }
-
 .login-form .group .input,
 .login-form .group .button{
 	border:none;
@@ -274,21 +280,17 @@ body{
 	border-radius:25px;
 	background:rgba(77, 109, 117, 0.1);
 }
-
 .login-form .group input[data-type="password"]{
 	text-security: circle;
 	-webkit-text-security:circle;
 }
-
 .login-form .group .label{
 	color:black;
 	font-size:12px;
 }
-
 .login-form .group .button{
 	background:#1161ee;
 }
-
 .login-form .group label .icon{
 	width:15px;
 	height:15px;
@@ -297,7 +299,6 @@ body{
 	display:inline-block;
 	background:rgba(255,255,255,.1);
 }
-
 .login-form .group label .icon:before,
 .login-form .group label .icon:after{
 	content:'';
@@ -307,7 +308,6 @@ body{
 	position:absolute;
 	transition:all .2s ease-in-out 0s;
 }
-
 .login-form .group label .icon:before{
 	left:3px;
 	width:5px;
@@ -315,14 +315,12 @@ body{
 	-webkit-transform:scale(0) rotate(0);
 	        transform:scale(0) rotate(0);
 }
-
 .login-form .group label .icon:after{
 	top:6px;
 	right:0;
 	-webkit-transform:scale(0) rotate(0);
 	        transform:scale(0) rotate(0);
 }
-
 .login-form .group .check:checked + label{
 	color:black;
 }
@@ -330,17 +328,14 @@ body{
 .login-form .group .check:checked + label .icon{
 	background:#1161ee;
 }
-
 .login-form .group .check:checked + label .icon:after{
 	-webkit-transform:scale(1) rotate(-45deg);
 	        transform:scale(1) rotate(-45deg);
 }
-
 .login-html .logar:checked + .tab + .cadastrar + .tab + .login-form .logar-htm{
 	-webkit-transform:rotate(0);
 	        transform:rotate(0);
 }
-
 .login-html .cadastrar:checked + .tab + .login-form .cadastrar-htm{
 	-webkit-transform:rotate(0);
 	        transform:rotate(0);
@@ -360,7 +355,6 @@ footer #rodape{
 	position: fixed;
 	border-bottom: 20px;
 }
-
 nav .navbar {
 	background-color: #FFFFF0;
 }
@@ -385,6 +379,8 @@ p {
 	margin: 20px 40px;
 	padding: 10px;
 }
+
+
 
 .home #vai{
 	box-sizing: 100px;
@@ -411,7 +407,9 @@ p {
 
 #btn-pesquisa{
 	box-sizing: 500px;
+
 }
+
 .test{
 	background-color: lightblue;
 }

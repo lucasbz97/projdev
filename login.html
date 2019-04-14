@@ -32,12 +32,12 @@
 				</li>
 				<!-- Menu -->
 				<div class="dropdown" id="dropId">
-					<button onclick="myFunction()" class="dropbtn">
+					<button onclick="dropDown()" class="dropbtn">
 						Menu
 					</button>
 					<div id="myDropdown" class="dropdown-content">
 						<a href="index.html">Home</a>
-						<a href="#about">Sobre</a>
+						<a href="cadastro-perguntas.html">Cadastrar Questões</a>
 						<a href="regras.html">Regras</a>
 
 					</div>
@@ -49,7 +49,7 @@
 
 
 	<!-- ratios de transição entre logar e cadastrar -->
-	<div class="tela-login">
+	<div class="principal">
 		<div class="login-html">
 			<input id="tab-1" type="radio" name="tab" class="logar" checked>
 			<label for="tab-1" class="tab">Fazer login</label>
@@ -73,8 +73,8 @@
 						<label for="check"><span class="icon"></span> Mantenha-me conectado</label>
 					</div>
 					<div class="group" id="btn">
-						<button type="button" class="btn btn-primary">Entrar</button>
-						<a href="index.html" class="btn btn-primary " role="button" aria-pressed="true">Voltar</a>
+						<button type="button" class="button btn btn-primary">Entrar</button><br>
+						<a href="index.html" class="button btn btn-primary " role="button" aria-pressed="true">Voltar</a>
 					</div>
 					<div class="foot-lnk">
 						<a href="#esqueceu">Esqueceu a senha?</a>
@@ -116,25 +116,7 @@
 
 	</footer>
 
-	<script>
-		// quando clicar uma vez, mostra os elementos do dropdown
-		function myFunction() {
-			document.getElementById("myDropdown").classList.toggle("show");
-		}
-		// quando clicado outra vez, minimiza os elementos de dropdown
-		window.onclick = function (event) {
-			if (!event.target.matches('.dropbtn')) {
-				var dropdowns = document.getElementsByClassName("dropdown-content");
-				var i;
-				for (i = 0; i < dropdowns.length; i++) {
-					var openDropdown = dropdowns[i];
-					if (openDropdown.classList.contains('show')) {
-						openDropdown.classList.remove('show');
-					}
-				}
-			}
-		}
-	</script>
+	<script src="main.js"></script>
 </body>
 
 </html>

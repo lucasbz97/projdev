@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SubDev's - Game</title>
+
+    <meta charset="utf-8">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="icon" href="img/oculos_barba.jpg">
+</head>
+
+<body>
+    <!-- Menu com bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <a class="navbar-brand" href="#">SubDev's</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="index.html">
+                        <img src="img/oculos_barba.jpg" alt="logo" style="width: 30px;">
+                    </a>
+                </li>
+                <!-- Menu -->
+                <div class="dropdown" id="dropId">
+                    <button onclick="dropDown()" class="dropbtn">Menu</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="index.html">Home</a>
+                        <a href="cadastro-perguntas.html">Cadastro Questões</a>
+                        <a href="regras.html">Regras</a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <div class="principal" id="jogo">
+        <h2 style="text-align: center">Questão</h2>
+
+        <form>
+            <!-- marcando o radio, será identificado como a alternativa correta inserida pelo aluno -->
+            <div>
+                <h4 class="questoes">Assinale a alternativa correta:</h4>
+            </div>
+            <div>
+                <div>
+                    <input type="number" min="0" max="5" id="frase-id">
+
+                    <input id="id-radio" type="radio"> A -
+                    <div>
+                        <p class="text">
+                            Denomina-se processo cooperativo ao processo que envolve
+                            uma
+                            multiplicidade de sujeitos, que se situam em vários polos diversos da relação
+                            processual.
+                        </p>
+                    </div>
+
+                    <div>
+                        <input type="number" min="0" max="5" id="frase-id">
+                        <input id="id-radio" type="radio">
+
+
+                        <label class="alternativas"> B -</label>
+                        <p class="text">
+                            Processo hierárquico é aquele em que há a estruturação
+                            da jurisdição em
+                            diferentes graus, de modo a permitir que a insurgência quanto a alguma
+                            decisão possa ser manifestada em instância superior.
+                        </p>
+                    </div>
+                    <input type="number" min="0" max="5" id="frase-id">
+                    <input id="id-radio" type="radio"> C -
+                    <p class="text">
+                        Nos processos cooperativos, veda-se decisões-surpresa e
+                        se impõe que a
+                        decisão judicial examine todas as razões trazidas pelas partes para a
+                        solução da controvérsia.
+                    </p>
+                    <div>
+
+
+                        <input type="number" min="0" max="5" id="frase-id">
+                        <input id="id-radio" type="radio"> D -
+                        <p class="text">
+                            Um modelo processual assimétrico se caracteriza pela
+                            falta de isonomia
+                            entre as partes do processo, de modo a compensar eventuais desigualdades
+                            materiais delas por um desequilíbrio processual.
+                        </p>
+                    </div>
+                    <div class="group" id="btn" style="text-align: center">
+                        <a href="tela-jogo.html" class="button btn btn-primary">Enviar</a>
+                        <a href="index.html" class="button btn btn-primary " role="button"
+                            aria-pressed="true">Voltar</a>
+                    </div>
+                    </select>
+                </div>
+        </form>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

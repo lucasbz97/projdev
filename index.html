@@ -31,46 +31,27 @@
                 </li>
                 <!-- Menu -->
                 <div class="dropdown" id="dropId">
-                    <button onclick="myFunction()" class="dropbtn">Menu</button>
+                    <button onclick="dropDown()" class="dropbtn">Menu</button>
                     <div id="myDropdown" class="dropdown-content">
-                        <a href="#about">Sobre</a>
+                            <a href="tela-jogo.html">Tela Jogo</a>
                         <a href="regras.html">Regras</a>
+                        <a href="cadastro-perguntas.html" >Cadastrar questões</a>
                     </div>
                 </div>
             </ul>
         </div>
     </nav>
-
-    <div class="home col-lg-12 col-md-8 col-sm-6 col-xs-2" id="vai">
+        
+    <div class="principal" id="vai" >
         <img class="col-md-12" src="img/oculos_barba.jpg" alt="Logo" />
         <h2 class="nome-logo col-md-12">SubDev's</h2>
         <div class="button-h" id="btn">
-            <a href="login.html" class="btn btn-primary" role="button" aria-pressed="true">Fazer Cadastro e Login</a>
+            <a href="login.html" class="btn btn-primary" role="button" aria-pressed="true">Fazer Cadastro e Login</a><t></t>
             <a href="sala.html" class="btn btn-primary" role="button" aria-pressed="true">Entrar em uma sala </a>
         </div>
     </div>
 
-    <script>
-        //quando clicar uma vez, mostra os elementos do dropdown
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-
-        // quando clicado outra vez, minimiza os elementos de dropdown
-        window.onclick = function (event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-    </script>
-
+    <script src="main.js"></script>
 </body>
 
 </html>

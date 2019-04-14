@@ -31,12 +31,12 @@
 				</li>
 				<!-- Menu -->
 				<div class="dropdown" id="dropId">
-					<button onclick="myFunction()" class="dropbtn">
+					<button onclick="dropDown()" class="dropbtn">
 						Menu
 					</button>
 					<div id="myDropdown" class="dropdown-content">
 						<a href="index.html">Home</a>
-						<a href="#about">Sobre</a>
+						<a href="cadastro-perguntas.html">Cadastrar Questões</a>
 						<a href="#contact">Regras</a>
 
 					</div>
@@ -46,7 +46,7 @@
 	</nav>
 	<h1 class="titulo-principal">Regras</h1>
 
-	<div class="container">
+	<div class="principal">
 		<p>Pode ser texto introdutório.</p>
 
 		<p>.</p>
@@ -84,25 +84,7 @@
 
 	</footer>
 
-	<script>
-		// quando clicar uma vez, mostra os elementos do dropdown
-		function myFunction() {
-			document.getElementById("myDropdown").classList.toggle("show");
-		}
-		// quando clicado outra vez, minimiza os elementos de dropdown
-		window.onclick = function (event) {
-			if (!event.target.matches('.dropbtn')) {
-				var dropdowns = document.getElementsByClassName("dropdown-content");
-				var i;
-				for (i = 0; i < dropdowns.length; i++) {
-					var openDropdown = dropdowns[i];
-					if (openDropdown.classList.contains('show')) {
-						openDropdown.classList.remove('show');
-					}
-				}
-			}
-		}
-	</script>
+	<script src="main.js"></script>
 </body>
 
 </html>

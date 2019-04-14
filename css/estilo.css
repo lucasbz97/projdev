@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 *,:after,:before{box-sizing:border-box}
 .clearfix:after,.clearfix:before{content:'';display:table}
 .clearfix:after{clear:both;display:block}
 a{color:inherit;text-decoration:none}
 
->>>>>>> ajustes css e js
 body{
 	margin:0;
 	color:#6a6f8c;
@@ -14,9 +11,7 @@ body{
 	font:600 16px/18px 'Open Sans',sans-serif;
 }
 
-<<<<<<< HEAD
-.page{
-=======
+
 .principal{
 	border-top: 50px;
 	width:100%;
@@ -42,7 +37,6 @@ body{
 }
 
 #page{
->>>>>>> ajustes css e js
 	margin: 0 auto;
 	margin-top: 100px;
 	width: 80%;
@@ -51,12 +45,6 @@ body{
 .pts{
 	border-radius: 20px;
 }
-
-<<<<<<< HEAD
-*,:after,:before{box-sizing:border-box}
-.clearfix:after,.clearfix:before{content:'';display:table}
-.clearfix:after{clear:both;display:block}
-a{color:inherit;text-decoration:none}
 
 .home{
 	width: 60%;
@@ -85,7 +73,8 @@ a{color:inherit;text-decoration:none}
 }
 .home h2{
 	font-size: 100px;
-=======
+}
+
 #jogo{
 	max-width:1200px;
 }
@@ -118,7 +107,6 @@ a{color:inherit;text-decoration:none}
 	font-size: 80px;
 	text-align: center;
 	top: 40px;
->>>>>>> ajustes css e js
 }
 
 .dropbtn {
@@ -133,6 +121,7 @@ a{color:inherit;text-decoration:none}
   .dropbtn:hover, .dropbtn:focus {
     background-color:whitesmoke;
   }
+
   #dropId{
     position: fixed;
     top: 3px;
@@ -180,7 +169,6 @@ a{color:inherit;text-decoration:none}
 	border-bottom: 10px;
 }
 
-<<<<<<< HEAD
 .tela-login, .telha-escolha{
 	border-top: 50px;
 	width:100%;
@@ -193,8 +181,6 @@ a{color:inherit;text-decoration:none}
 	
 	/* box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19); */
 }
-=======
->>>>>>> ajustes css e js
 
 .login-html, .escolha-html{
 	width:100%;
@@ -204,6 +190,7 @@ a{color:inherit;text-decoration:none}
 	background-color: transparent;
 	/* background:rgba(129, 161, 202, 0.9); */
 }
+
 .login-html .logar-htm
 {
 	top:0;
@@ -217,6 +204,7 @@ a{color:inherit;text-decoration:none}
 	        backface-visibility:hidden;
 	transition:all .4s ease-in;
 }
+
 .login-html .cadastrar-htm
 {
 	top:0;
@@ -230,16 +218,19 @@ a{color:inherit;text-decoration:none}
 	        backface-visibility:hidden;
 	transition:all .6s ease-in-out;
 }
+
 .login-html .logar,
 .login-html .cadastrar,
 .login-form .group .check{
 	display:none;
 }
+
 .login-html .tab,
 .login-form .group .label,
 .login-form .group .button{
 	text-transform:uppercase;
 }
+
 .login-html .tab{
 	font-size:22px;
 	margin-right:15px;
@@ -248,11 +239,13 @@ a{color:inherit;text-decoration:none}
 	display:inline-block;
 	border-bottom:2px solid transparent;
 }
+
 .login-html .logar:checked + .tab,
 .login-html .cadastrar:checked + .tab{
 	color: black;
 	border-color:#1161ee;
 }
+
 .login-form{ 
 	min-height:345px;
 	position:relative;
@@ -261,6 +254,7 @@ a{color:inherit;text-decoration:none}
 	-webkit-transform-style:flat;
 	        transform-style:flat;
 }
+
 .login-form .group{
 	margin-bottom:15px;
 }
@@ -268,13 +262,11 @@ a{color:inherit;text-decoration:none}
 .login-form .group .input,
 .login-form .group .button{
 	width:100%;
-<<<<<<< HEAD
 	color:black;
-=======
 	color:white;
->>>>>>> ajustes css e js
 	display:block;
 }
+
 .login-form .group .input,
 .login-form .group .button{
 	border:none;
@@ -282,17 +274,21 @@ a{color:inherit;text-decoration:none}
 	border-radius:25px;
 	background:rgba(77, 109, 117, 0.1);
 }
+
 .login-form .group input[data-type="password"]{
 	text-security: circle;
 	-webkit-text-security:circle;
 }
+
 .login-form .group .label{
 	color:black;
 	font-size:12px;
 }
+
 .login-form .group .button{
 	background:#1161ee;
 }
+
 .login-form .group label .icon{
 	width:15px;
 	height:15px;
@@ -301,6 +297,7 @@ a{color:inherit;text-decoration:none}
 	display:inline-block;
 	background:rgba(255,255,255,.1);
 }
+
 .login-form .group label .icon:before,
 .login-form .group label .icon:after{
 	content:'';
@@ -310,6 +307,7 @@ a{color:inherit;text-decoration:none}
 	position:absolute;
 	transition:all .2s ease-in-out 0s;
 }
+
 .login-form .group label .icon:before{
 	left:3px;
 	width:5px;
@@ -317,12 +315,14 @@ a{color:inherit;text-decoration:none}
 	-webkit-transform:scale(0) rotate(0);
 	        transform:scale(0) rotate(0);
 }
+
 .login-form .group label .icon:after{
 	top:6px;
 	right:0;
 	-webkit-transform:scale(0) rotate(0);
 	        transform:scale(0) rotate(0);
 }
+
 .login-form .group .check:checked + label{
 	color:black;
 }
@@ -330,14 +330,17 @@ a{color:inherit;text-decoration:none}
 .login-form .group .check:checked + label .icon{
 	background:#1161ee;
 }
+
 .login-form .group .check:checked + label .icon:after{
 	-webkit-transform:scale(1) rotate(-45deg);
 	        transform:scale(1) rotate(-45deg);
 }
+
 .login-html .logar:checked + .tab + .cadastrar + .tab + .login-form .logar-htm{
 	-webkit-transform:rotate(0);
 	        transform:rotate(0);
 }
+
 .login-html .cadastrar:checked + .tab + .login-form .cadastrar-htm{
 	-webkit-transform:rotate(0);
 	        transform:rotate(0);
@@ -357,6 +360,7 @@ footer #rodape{
 	position: fixed;
 	border-bottom: 20px;
 }
+
 nav .navbar {
 	background-color: #FFFFF0;
 }
@@ -382,8 +386,6 @@ p {
 	padding: 10px;
 }
 
-
-<<<<<<< HEAD
 .home #vai{
 	box-sizing: 100px;
 	margin-top: 4.7px;
@@ -402,18 +404,13 @@ p {
 	font-size: 880px;
 
 }
-=======
->>>>>>> ajustes css e js
+
 .btn-cad{
 	clear: both;
 }
 
 #btn-pesquisa{
 	box-sizing: 500px;
-	
-<<<<<<< HEAD
-}
-=======
 }
 .test{
 	background-color: lightblue;
@@ -447,4 +444,3 @@ input[type=number]:not(.browser-default){
 	transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
 	
 }
->>>>>>> ajustes css e js

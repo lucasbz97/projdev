@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="icon" href="img/oculos_barba.jpg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -51,27 +52,35 @@
             <div>
                 <br>
                 <div>
-                    <ul style="list-style-type: none">
+                    <ul class="teste" style="list-style-type: none">
 
                         <li>
-                            <label><input type="number" min="0" max="5" id="frase-id"> A -
+                            <label><input type="number" min="0" max="5" id="frase-id0" value="0" oninput="teste()"
+                                    onkeydown="return false"> A -
                                 <span>França.</span>
                         </li>
 
                         <li>
-                            <label><input type="number" min="0" max="5" id="frase-id"> B -
+                            <label><input type="number" min="0" max="5" id="frase-id1" value="0" oninput="teste()"
+                                    onkeydown="return false"> B -
                                 <span>Inglaterra.</span>
                         </li>
                         <li>
-                            <label><input type="number" min="0" max="5" id="frase-id"> C -
+                            <label><input type="number" min="0" max="5" id="frase-id2" value="0" oninput="teste()"
+                                    onkeydown="return false"> C -
                                 <span>Brasil.</span>
                         </li>
 
                         <li>
-                            <label><input type="number" min="0" max="5" id="frase-id"> D -
+                            <label><input type="number" min="0" max="5" id="frase-id3" value="0" oninput="teste()"
+                                    onkeydown="return false"> D -
                                 <span>Austrália.</span>
                         </li>
 
+                        <li>
+                            <label><input type="number" min="0" max="5" id="frase-id4" value="0" oninput="teste()"> E -
+                                <span>Alemanha.</span>
+                        </li>
                     </ul>
 
 
@@ -86,8 +95,21 @@
         </form>
     </div>
 
-    <script src="main.js"></script>
+    <script>
+        function teste() {
+            var i = 0;
+            var o = 0;
+            for (i; i < 5; i++) {
+                o += parseInt($("#frase-id" + i).val());
+                if (o > 5) {
+                    event.target.value -= 1;
+                    o=0;
+                }
+            }
+        }
+    </script>
 
+    <script src="main.js"></script>
 </body>
 
 </html>

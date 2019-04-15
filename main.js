@@ -15,7 +15,7 @@ window.onclick = function (event) {
     }
 }
 
-function teste() {
+function numericUpDown() {
     var i = 0;
     var o = 0;
     for (i; i < 5; i++) {
@@ -23,6 +23,7 @@ function teste() {
         if (o > 5) {
             event.target.value -= 1;
             o = 0;
+            console.log("aaa");
         }
     }
 }

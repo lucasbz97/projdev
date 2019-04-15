@@ -15,4 +15,14 @@ window.onclick = function (event) {
     }
 }
 
-
+function teste() {
+    var i = 0;
+    var o = 0;
+    for (i; i < 5; i++) {
+        o += parseInt($("#frase-id" + i).val());
+        if (o > 5) {
+            event.target.value -= 1;
+            o = 0;
+        }
+    }
+}

@@ -1,9 +1,9 @@
 <?php
 class Usuario
 {
-    var $ID;
-    var $Email;
-    var $Senha;
+    private $ID;
+    private $Email;
+    private $Senha;
 
     function getID()
     {

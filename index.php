@@ -20,8 +20,7 @@
     $novo->setID("1");
     $novo->setEmail("teste@teste.com");
     $novo->setSenha("teste");
-    echo $novo->getID();
-    $bd->inserir($novo);
+    $bd->inserir($novo->getEmail());
     ?>
     <!-- <form action="bdo.php" method="POST">
         <input type="submit" value="aaaa vai"/>

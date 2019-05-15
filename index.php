@@ -10,6 +10,22 @@
     <link rel="stylesheet" href="css/estilo.css">
 
     <link rel="icon" href="img/oculos_barba.jpg">
+
+
+    <?php
+    require 'class/Usuario.php';
+    require 'class/DAO.php';
+    $bd = new DAO();
+    $novo = new Usuario();
+    $novo->setID("1");
+    $novo->setEmail("teste@teste.com");
+    $novo->setSenha("teste");
+    echo $novo->getID();
+    $bd->inserir($novo);
+    ?>
+    <!-- <form action="bdo.php" method="POST">
+        <input type="submit" value="aaaa vai"/>
+    </form> -->
 </head>
 
 <body>
@@ -47,7 +63,7 @@
         <h2 class="nome-logo col-md-12">SubDev's</h2>
         <div class="button-h" id="btn">
             <a href="login.html" class="btn btn-primary" role="button" aria-pressed="true">Fazer Cadastro e Login</a>
-            <t></t>
+            <!-- <t></t> -->
             <a href="sala.html" class="btn btn-primary" role="button" aria-pressed="true">Entrar em uma sala </a>
         </div>
     </div>

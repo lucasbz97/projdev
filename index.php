@@ -13,14 +13,19 @@
 
 
     <?php
-    require 'class/Usuario.php';
-    require 'class/DAO.php';
+    require 'Usuario.php';
+    require 'DAO.php';
     $bd = new DAO();
     $novo = new Usuario();
     $novo->setID("1");
     $novo->setEmail("teste@teste.com");
     $novo->setSenha("teste");
-    $bd->inserir($novo->getEmail());
+    if($bd->inserir($novo->getEmail())) {
+        echo "Dado gravado";
+    } else {
+        echo "Falha na gravacao";
+    }
+    
     ?>
     <!-- <form action="bdo.php" method="POST">
         <input type="submit" value="aaaa vai"/>

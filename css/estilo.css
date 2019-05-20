@@ -12,6 +12,7 @@ body{
 	background:rgba(191, 196, 197, 0); 
 	/* background:url(../img/background.png) no-repeat center; */
 	font:600 16px/18px 'Open Sans',sans-serif;
+	overflow: hidden;
 }
 
 footer div{

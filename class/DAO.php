@@ -20,11 +20,5 @@ class DAO
         $email = $novo;
         $stm->execute();
 
-        if (!mysqli_query($this->con, $comm_insert)) {
-            echo $this->con->error;
-            //echo "erro";
-        } else {
-            echo "dados gravados";
-        }
     }
 }

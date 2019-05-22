@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -47,12 +47,6 @@
 
 
     <!-- ratios de transição entre logar e cadastrar -->
-    <div id="alertsuccess" class="alert alert-success" style="display:none" role="alert">
-        Cadastrado com sucesso!
-    </div>
-    <div id="alerterror" class="alert alert-danger" style="display:none" role="alert">
-        Usuário já cadastrado!
-    </div>
     <div class="principal">
         <div class="login-html">
             <input required id="tab-1" type="radio" name="tab" class="logar" checked>
@@ -85,6 +79,8 @@
                     </div>
                 </div>
 
+
+
                 <form action="login.php" method="post">
                     <!-- Cadastramento de usuário -->
                     <div class="cadastrar-htm">
@@ -111,6 +107,14 @@
                 </form>
             </div>
         </div>
+        <div>
+            <div id="alertsuccess" class="alert alert-success" style="display:none;position:center;width:100%;margin: 0 auto;opacity: 1" role="alert">
+                Cadastro: Cadastrado com sucesso!
+            </div>
+            <div id="alerterror" class="alert alert-danger" style="display:none;position:center;width:100%;margin: 0 auto;opacity: 1" role="alert">
+                Cadastro: Usuário já cadastrado!
+            </div>
+        </div>
     </div>
 
     <?php
@@ -118,8 +122,6 @@
     require './class/UsuarioDAO.php';
 
     if ($_POST) {
-        //echo  "<script>alert('');</script>";
-        //$novouser =  Usuario();
         $novouser = new Usuario();
         $novouser->setUsuario($_POST['username']);
         $novouser->setEmail($_POST['email']);
@@ -129,9 +131,10 @@
         $status = $bdDAO->Inserir($novouser);
 
         echo  "<script>";
-        echo "document.getElementById('".$status."').style.display = 'block';";
+        echo "document.getElementById('" . $status . "').style.display = 'block';";
+        echo "$('#" . $status . "').animate({opacity: '1'},2500,function(){";
+        echo "$('#" . $status . "').animate({opacity: '0'},1000)});";
         echo "</script>";
-        //echo  "<script>alert('".$novouser->getUsuario()."');</script>";
     }
     ?>
 

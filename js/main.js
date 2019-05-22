@@ -38,4 +38,5 @@ function passwordValidate() {
         btn_submit.disabled = false;
         btn_submit.style.opacity = "1";
     }
+    document.getElementById().style.webkitAnimation
 }

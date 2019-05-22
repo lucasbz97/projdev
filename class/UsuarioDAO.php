@@ -6,7 +6,7 @@ class UsuarioDAO
     {
         $this->con = mysqli_connect("localhost", "root", "", "projdev");
         if (!$this->con) {
-            die("<h1>ERRO NA CONEXÃO</h1>");
+            die("<h1>Site Indisponível</h1>");
         }
     }
 

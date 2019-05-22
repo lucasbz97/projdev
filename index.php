@@ -55,7 +55,7 @@
                     <button onclick="dropDown()" class="dropbtn">Menu</button>
                     <div id="myDropdown" class="dropdown-content">
                         <a href="tela-jogo.html">Tela Jogo</a>
-                        <a href="regras.html">Regras</a>
+                        <a href="ranking.html">ranking</a>
                         <a href="cadastro-perguntas.html">Cadastrar questões</a>
                     </div>
                 </div>

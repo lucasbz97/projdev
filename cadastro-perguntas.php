@@ -30,7 +30,7 @@
     
 </head>
 
-<body>
+<body class="fadeIn">
     <!-- Menu com bootstrap -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
 

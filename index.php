@@ -8,23 +8,24 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/estilo.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <link rel="icon" href="img/oculos_barba.jpg">
 
 
     <?php
-    require 'Usuario.php';
-    require 'DAO.php';
-    $bd = new DAO();
-    $novo = new Usuario();
-    $novo->setID("1");
-    $novo->setEmail("teste@teste.com");
-    $novo->setSenha("teste");
-    if($bd->inserir($novo->getEmail())) {
-        echo "Dado gravado";
-    } else {
-        echo "Falha na gravacao";
-    }
+    // require 'Usuario.php';
+    // require 'DAO.php';
+    // $bd = new DAO();
+    // $novo = new Usuario();
+    // $novo->setID("1");
+    // $novo->setEmail("teste@teste.com");
+    // $novo->setSenha("teste");
+    // if($bd->inserir($novo->getEmail())) {
+    //     echo "Dado gravado";
+    // } else {
+    //     echo "Falha na gravacao";
+    // }
     
     ?>
     <!-- <form action="bdo.php" method="POST">
@@ -66,13 +67,13 @@
         <img class="col-md-12" src="img/oculos_barba.jpg" alt="Logo" />
         <h2 class="nome-logo col-md-12">SubDev's</h2>
         <div class="button-h" id="btn">
-            <a href="login.html" class="btn btn-primary" role="button" aria-pressed="true">Fazer Cadastro e Login</a>
+            <a href="login.php" class="btn btn-primary" role="button" aria-pressed="true">Login</a>
             <!-- <t></t> -->
             <a href="sala.html" class="btn btn-primary" role="button" aria-pressed="true">Entrar em uma sala </a>
         </div>
     </div>
 
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 
     <footer>
             <div class="icones-redes-sociais">

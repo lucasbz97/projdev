@@ -6,10 +6,13 @@
 
     <meta charset="utf-8">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
-    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="icon" href="img/oculos_barba.jpg">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="css/libs/google-fonts.css">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+
+
 </head>
 
 <body class="fadeIn">
@@ -35,13 +38,13 @@
                     <div id="myDropdown" class="dropdown-content">
                         <a href="index.html">Home</a>
                         <a href="cadastro-perguntas.html">Cadastro Questões</a>
-                        <a href="regras.html">Regras</a>
                     </div>
                 </div>
             </ul>
         </div>
     </nav>
-    <div class="principal" id="jogo">
+    <div class="container" id="jogo"><br>
+
         <h2 style="text-align: center">Questão</h2>
         <br>
         <form>
@@ -55,46 +58,79 @@
                     <ul style="list-style-type: none">
 
                         <li>
-                            <label><input type="number" min="0" max="5" id="frase-id0" value="0" oninput="numericUpDown()"
-                                    onkeydown="return false"> A -
+                            <label><input type="number" min="0" max="5" id="frase-id0" value="0"
+                                    oninput="numericUpDown()" onkeydown="return false">A -
                                 <span>França.</span>
                         </li>
 
                         <li>
-                            <label><input type="number" min="0" max="5" id="frase-id1" value="0" oninput="numericUpDown()"
-                                    onkeydown="return false"> B -
+                            <label><input type="number" min="0" max="5" id="frase-id1" value="0"
+                                    oninput="numericUpDown()" onkeydown="return false"> B -
                                 <span>Inglaterra.</span>
                         </li>
                         <li>
-                            <label><input type="number" min="0" max="5" id="frase-id2" value="0" oninput="numericUpDown()"
-                                    onkeydown="return false"> C -
+                            <label><input type="number" min="0" max="5" id="frase-id2" value="0"
+                                    oninput="numericUpDown()" onkeydown="return false"> C -
                                 <span>Brasil.</span>
                         </li>
 
                         <li>
-                            <label><input type="number" min="0" max="5" id="frase-id3" value="0" oninput="numericUpDown()"
-                                    onkeydown="return false"> D -
+                            <label><input type="number" min="0" max="5" id="frase-id3" value="0"
+                                    oninput="numericUpDown()" onkeydown="return false"> D -
                                 <span>Austrália.</span>
                         </li>
-
                         <li>
-                            <label><input type="number" min="0" max="5" id="frase-id4" value="0" oninput="numericUpDown()"> E -
+                            <label><input type="number" min="0" max="5" id="frase-id4" value="0"
+                                    oninput="numericUpDown()" onkeydown="return false"> E -
                                 <span>Alemanha.</span>
                         </li>
+
                     </ul>
 
 
 
-                    <div class="group" id="btn" style="text-align: center">
-                        <a href="tela-jogo.html" class="button btn btn-primary">Enviar</a>
+
+
+                    <div class="group" id="btn"style="text-align: center">
+                        <div class="botoes container "style="text-align: left">
+                            <a id="botao-placar" class="button btn btn-primary" style="margin-left: 3%">Placar</a>
+                        </div>
+                        
+                        <a href="tela-jogo.html" class="button btn btn-primary" >Enviar</a>
                         <a href="index.html" class="button btn btn-primary " role="button"
                             aria-pressed="true">Voltar</a>
-                    </div>
+                    </div><br>
+
                     </select>
                 </div>
         </form>
+
+
+        <section class="placar">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Posição</th>
+                        <th scope="col">Usuário</th>
+                        <th scope="col">No. de pontos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1º</td>
+                        <td>joaozin</td>
+                        <td>99999</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
     </div>
-    <script src="js/main.js"></script>
+
+    <script src="jquery.js"></script>
+    <script src="main.js"></script>
+    <script src="placar.js"></script>
+
 </body>
 
 </html>

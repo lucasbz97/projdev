@@ -52,7 +52,7 @@
                     <button onclick="dropDown()" class="dropbtn">Menu</button>
                     <div id="myDropdown" class="dropdown-content">
                         <a href="index.html">Home</a    >
-                        <a href="regras.html">Regras</a>
+                        <a href="tela-jogo.html">Tela Jogo</a>
                     </div>
                 </div>
             </ul>

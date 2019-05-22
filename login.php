@@ -36,7 +36,6 @@
                     <div id="myDropdown" class="dropdown-content">
                         <a href="index.html">Home</a>
                         <a href="cadastro-perguntas.html">Cadastrar Questões</a>
-                        <a href="regras.html">Regras</a>
 
                     </div>
                 </div>

@@ -449,3 +449,10 @@ input[type=number]:not(.browser-default){
 	transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
 	
 }
+.placar{
+	display: none;
+}
+#botao-placar{
+	color: white;
+	
+}

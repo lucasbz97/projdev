@@ -30,7 +30,7 @@ function numericUpDown() {
 
 function passwordValidate() {
     var pass2 = event.target.id;
-    var pass = pass2.substring(0, 8);
+    var pass = pass2.substring(0, 13);
     var btn_submit = document.getElementById('submit');
     btn_submit.disabled = true;
     btn_submit.style.opacity = "0.5";
@@ -38,5 +38,29 @@ function passwordValidate() {
         btn_submit.disabled = false;
         btn_submit.style.opacity = "1";
     }
-    document.getElementById().style.webkitAnimation
+}
+
+function AlertMessage(AlertJson) {
+    if (AlertJson != undefined) {
+        if (AlertJson['alert'] == 0) {
+            var objAlert = document.getElementById('alerterror');
+            objAlert.innerHTML = AlertJson['mensagem'];
+            ShowAlert(objAlert);
+        } else if (AlertJson['alert'] == 1) {
+            var objAlert = document.getElementById('alertsuccess');
+            objAlert.innerHTML = AlertJson['mensagem'];
+            ShowAlert(objAlert);
+        }
+    }
+}
+
+function ShowAlert(objAlert) {
+    objAlert.style.display = 'block';
+    $('#' + objAlert.id).animate({
+        opacity: '1'
+    }, 2500, function() {
+        $('#' + objAlert.id).animate({
+            opacity: '0'
+        }, 1000)
+    });
 }

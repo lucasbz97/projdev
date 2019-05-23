@@ -13,18 +13,18 @@
     
     <?php
 
-    require 'questoes.php';
-    require 'DAO.php';
-    $bd = new DAO();
-    $novo = new questoes();
-    $novo->setQuestao("testesteste");
-    $novo->setAlternativa("aaaa");
-    $novo->setCheckbox(1);
-    if($bd->inserir($novo->getQuestao())) {
-        echo "Dado gravado";
-    } else {
-        echo "Falha na gravacao";
-    }
+    // require 'questoes.php';
+    // require 'DAO.php';
+    // $bd = new DAO();
+    // $novo = new questoes();
+    // $novo->setQuestao("testesteste");
+    // $novo->setAlternativa("aaaa");
+    // $novo->setCheckbox(1);
+    // if($bd->inserir($novo->getQuestao())) {
+    //     echo "Dado gravado";
+    // } else {
+    //     echo "Falha na gravacao";
+    // }
     
     ?>
     

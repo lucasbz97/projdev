@@ -1,5 +1,5 @@
 <?php
-class UsuarioDAO
+class SalaDAO
 {
     private $con;
     function __construct()
@@ -10,32 +10,32 @@ class UsuarioDAO
         }
     }
 
-    public function Login($login)
+    public function BuscarSalas($id_usua)
     {
-        $nome = $login->getUsuario();
-        $senha = $login->getSenha();
-
-        $comm_query = "select ID_USUA,NOME_USUA,SENHA_USUA from USUARIO where NOME_USUA = ? AND SENHA_USUA = ?";
+        $comm_query = "select ID_SALA,NOME_SALA from SALA where SALA_USUA_ID = ?";
 
         $stm = mysqli_prepare($this->con, $comm_query);
-        $stm->bind_param('ss', $nome, $senha);
+        $stm->bind_param('s', $id_usua);
         $stm->execute();
 
-        $stm->bind_result($result_id,$result_nome, $result_senha);
+        $stm->bind_result($result_id, $result_nome);
         $stm->store_result();
-
-        if ($stm->num_rows == 1) {
-            $stm->fetch();
-            $_SESSION['id_usuario_logado'] = $result_id;
-            $_SESSION['usuario_logado'] = $result_nome;
-            return 1;
+        $cont = 0;
+        $lista_salas = [];
+        while ($stm->fetch()) {
+            $lista_salas[$cont]=array("id"=>$result_id,"nome"=>$result_nome);
+            $cont++;
         }
-        return 0;
+
+        if ($cont = 1) {
+            return $lista_salas;
+        }
+        return null;
     }
 
     public function Inserir($novo)
     {
-        if ($this->VerificaUsua($novo->getEmail(),$novo->getUsuario()) == 0) {
+        if ($this->VerificaUsua($novo->getEmail(), $novo->getUsuario()) == 0) {
             $comm_insert = "insert into usuario (NOME_USUA,EMAIL_USUA,SENHA_USUA) values(?,?,?)";
             $nome = $novo->getUsuario();
             $email = $novo->getEmail();

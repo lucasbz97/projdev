@@ -1,50 +1,38 @@
-<?php
 class Sala
 {
-    private $ID;
+    private $ID_SALA;
     private $ID_Usuario;
-    private $Nome;
-
+    private $Nome_SALA;
+    private $NR_SALA;
     function __construct()
     {
-        $this->ID = null;
+        $this->ID_SALA = null;
         $this->ID_Usuario = null;
-        $this->Nome = null;
+        $this->Nome_SALA = null;
+        $THI->NR_SALA = NULL;
     }
-
-    function getID()
+    function getID_SALA()
     {
-        return $this->ID;
+        return $this->ID_SALA;
     }
-    function getNome()
+    function getNome_SALA()
     {
-        return $this->Nome;
+        return $this->Nome_SALA;
     }
-    function getSenha()
-    {
-        return $this->Senha;
-    }
-
     function getID_Usuario()
     {
         return $this->ID_Usuario;
     }
-
     function setID_Usuario($id_usuario)
     {
         $this->ID_Usuario = $id_usuario;
     }
-
-    function setID($id)
+    function setID_SALA($id)
     {
-        $this->ID = $id;
+        $this->ID_SALA = $id;
     }
-    function setNome($nome)
+    function setNome_SALA($nome)
     {
-        $this->Nome = $nome;
-    }
-    function setSenha($senha)
-    {
-        $this->Senha = $senha;
+        $this->Nome_SALA = $nome;
     }
 }

@@ -22,32 +22,6 @@ if (isset($_SESSION['usuario_logado'])) {
 </head>
 
 <body class="fadeIn">
-    <script>
-        function AlertMessage(AlertJson) {
-            if (AlertJson != undefined) {
-                if (AlertJson['alert'] == 0) {
-                    var objAlert = document.getElementById('alerterror');
-                    objAlert.innerHTML = AlertJson['mensagem'];
-                    ShowAlert(objAlert);
-                } else if (AlertJson['alert'] == 1) {
-                    var objAlert = document.getElementById('alertsuccess');
-                    objAlert.innerHTML = AlertJson['mensagem'];
-                    ShowAlert(objAlert);
-                }
-            }
-        }
-
-        function ShowAlert(objAlert) {
-            objAlert.style.display = 'block';
-            $('#' + objAlert.id).animate({
-                opacity: '1'
-            }, 2500, function() {
-                $('#' + objAlert.id).animate({
-                    opacity: '0'
-                }, 1000)
-            });
-        }
-    </script>
     <!-- Menu com bootstrap -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
 

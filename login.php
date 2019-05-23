@@ -7,7 +7,6 @@ $alert = "";
 //para alertas
 //$alert = json_encode(array("alert"=>'0',"mensagem"=>"Usuario ou senha inválidos!"));
 if (isset($_POST['submitlogin'])) {
-    echo "<script>console.log('login')</script>";
     if (empty($_POST['userlogin']) || empty($_POST['passwordlogin'])) {
         $alert = json_encode(array("alert" => '0', "mensagem" => "Usuario ou senha inválidos!"));
     } else {
@@ -20,6 +19,7 @@ if (isset($_POST['submitlogin'])) {
             $alert = json_encode(array("alert" => '0', "mensagem" => "Usuario ou senha inválidos!"));
         }else{
             header("location: UserPage.php");
+            die();
         }
     }
 } else if (isset($_POST['submitcad'])) {

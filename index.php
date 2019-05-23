@@ -75,7 +75,7 @@ if (session_destroy()) // Destroying All Sessions
         <div class="button-h" id="btn">
             <a href="UserLogin.php" class="btn btn-primary" role="button" aria-pressed="true">Login</a>
             <!-- <t></t> -->
-            <a href="sala.html" class="btn btn-primary" role="button" aria-pressed="true">Entrar em uma sala </a>
+            <a href="salajogo.php" class="btn btn-primary" role="button" aria-pressed="true">Entrar em uma sala </a>
         </div>
     </div>
 

@@ -12,24 +12,30 @@ $salas_div = "";
 $bdsala = new SalaDAO();
 $lista = $bdsala->BuscarSalas($id_usua);
 if ($lista == null) {
-    $salas_div = "Nenhuma sala criada";
+    $salas_erro = "Nenhuma sala criada";
 } else {
     foreach ($lista as &$item) {
+
         $salas_div .= "<div class='col-xs-12 col-sm-12 col-md-6 col-lg-4' style='float:left'>";
         $salas_div .= "<div class='card'>";
         $salas_div .= "<div class='card-body'>";
         $salas_div .= "<h5 style='text-align:center;margin-top:30px' class='card-title'>" . $item['nome'] . "</h5>";
-        $salas_div .= "<a href='#' style='text-align:center;margin-top:30px;width:100%;' class='btn btn-primary'>Editar Sala</a>";
+        $salas_div .= "<form action='cadastrosala.php' method='post'>";
+        $salas_div .= "<button class='btn btn-primary' style='text-align:center;margin-top:30px;width:100%;' name='editesala' type='submit' role='button' value='" . $item['id'] . "'>Editar Sala</button>";
+        $salas_div .= "<form>";
         $salas_div .= "</div>";
         $salas_div .= "</div>";
         $salas_div .= "</div>";
     }
     unset($item);
-    $salas_div .= "<div class='col-xs-12 col-sm-12 offset-md-2 offset-lg-4 col-md-7 col-lg-4' style='float:left;margin-top: 60px'>";
-    $salas_div .= "<div class='card' style='background-color:#efefef'>";
+    $salas_div .= "<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12' style='height:2rem;width:1rem'></div>";
+    $salas_div .= "<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12' style='float:left;'>";
+    $salas_div .= "<div class='card col-xs-12 col-sm-12 col-md-6 col-lg-4' style='background-color:#efefef'>";
     $salas_div .= "<div class='card-body'>";
     $salas_div .= "<h5 style='text-align:center;margin-top:30px' class='card-title'>Nova Sala</h5>";
-    $salas_div .= "<a href='#' style='text-align:center;margin-top:30px;width:100%;' class='btn btn-primary'>Criar Sala</a>";
+    $salas_div .= "<form action='cadastrosala.php' method='post'>";
+    $salas_div .= "<button style='text-align:center;margin-top:30px;width:100%;' name='criasala' type='submit' role='button' value='nova_sala' class='btn btn-primary'>Criar Sala</button>";
+    $salas_div .= "<form>";
     $salas_div .= "</div>";
     $salas_div .= "</div>";
     $salas_div .= "</div>";
@@ -70,10 +76,11 @@ if ($lista == null) {
                 </li>
                 <!-- Menu -->
                 <div class="dropdown" id="dropId">
+                    <span>Bem vindo, <?php echo $nome_usua; ?></span>
                     <button onclick="dropDown()" class="dropbtn">Menu</button>
                     <div id="myDropdown" class="dropdown-content">
-                        <a href="index.html">Home</a>
-                        <a href="regras.html">Regras</a>
+                        <a href="UserPage.php">Home</a>
+                        <a href="logout.php">Sair</a>
                     </div>
                 </div>
             </ul>
@@ -86,8 +93,6 @@ if ($lista == null) {
                 <?php echo $salas_div; ?>
             </div>
         </div>
-
-
     </div>
 </body>
 

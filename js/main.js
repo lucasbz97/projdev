@@ -58,7 +58,7 @@ function ShowAlert(objAlert) {
     objAlert.style.display = 'block';
     $('#' + objAlert.id).animate({
         opacity: '1'
-    }, 2500, function() {
+    }, 2500, function () {
         $('#' + objAlert.id).animate({
             opacity: '0'
         }, 1000)

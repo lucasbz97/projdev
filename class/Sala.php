@@ -1,10 +1,11 @@
 class Sala
 {
     private $ID_SALA;
-    private $ID_Usuario;
     private $Nome_SALA;
+    private $ID_Usuario;
     private $NR_SALA;
     function __construct()
+    <!-- GET´S -->
     {
         $this->ID_SALA = null;
         $this->ID_Usuario = null;
@@ -23,10 +24,13 @@ class Sala
     {
         return $this->ID_Usuario;
     }
-    function setID_Usuario($id_usuario)
-    {
-        $this->ID_Usuario = $id_usuario;
+    function getNR_SALA(){
+        return $this->NR_SALA;
     }
+
+    <!-- SET´S -->
+    
+
     function setID_SALA($id)
     {
         $this->ID_SALA = $id;
@@ -35,4 +39,13 @@ class Sala
     {
         $this->Nome_SALA = $nome;
     }
+
+    function setID_Usuario($id_usuario)
+    {
+        $this->ID_Usuario = $id_usuario;
+    }
+    funtion setNR_SALA($nr_sala){
+        $this->NR_SALA = $nr_sala;
+    }
+    
 }

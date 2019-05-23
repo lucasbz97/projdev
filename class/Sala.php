@@ -1,3 +1,4 @@
+<?php
 class Sala
 {
     private $ID_SALA;
@@ -5,12 +6,12 @@ class Sala
     private $ID_Usuario;
     private $NR_SALA;
     function __construct()
-    <!-- GET´S -->
+    // <!-- GET´S -->
     {
         $this->ID_SALA = null;
         $this->ID_Usuario = null;
         $this->Nome_SALA = null;
-        $THI->NR_SALA = NULL;
+        $this->NR_SALA = NULL;
     }
     function getID_SALA()
     {
@@ -28,7 +29,7 @@ class Sala
         return $this->NR_SALA;
     }
 
-    <!-- SET´S -->
+    // <!-- SET´S -->
     
 
     function setID_SALA($id)
@@ -44,7 +45,7 @@ class Sala
     {
         $this->ID_Usuario = $id_usuario;
     }
-    funtion setNR_SALA($nr_sala){
+    function setNR_SALA($nr_sala){
         $this->NR_SALA = $nr_sala;
     }
     

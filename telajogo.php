@@ -1,21 +1,18 @@
 <?php
 session_start();
-include(jogo.php);
-//
-If(isset($_POST['submitresp'])){
-$respostas = New jogoControle($_POST['checked']););
-}else if(isset($_POST[submitnrsala])){
-$salaid= $_SESSION['id_sala_jogo];
-$lista_perguntas= new PerguntasDAO($salaid);
-Foreach($lista_perguntas as &$item){
-$item['alternativa'];
-$item['checked'];
-}
-$item['questao'];
-unset($item);
+require 'class/JogoControle.php';
+if (isset($_POST['submitresp'])) {
+    $idjogo = intval($_SESSION['ID_JOGO_ALTERNATIVA']) + 1;
+} else {
+    $idjogo = $_SESSION['ID_JOGO_ALTERNATIVA'] + 1;
+    $idsalajogo = $_SESSION['id_sala_jogo'];
+    $respdao = new JogoControle();
+    $lista = $respdao->BuscarJogo($idjogo, $idsalajogo);
 }
 //
-$id_sala_jogo = $_SESSION['id_sala_jogo'];
+//$id_sala_jogo = $_SESSION['id_sala_jogo'];
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,10 +28,14 @@ $id_sala_jogo = $_SESSION['id_sala_jogo'];
     <link rel="stylesheet" href="css/libs/google-fonts.css">
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
 
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/placar.js"></script>
+
 
 </head>
 
-<body class="fadeIn">
+<body class="fadeIn" style="overflow:auto">
     <!-- Menu com bootstrap -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
@@ -68,38 +69,28 @@ $id_sala_jogo = $_SESSION['id_sala_jogo'];
 
         <h2 style="text-align: center">Questão</h2>
         <br>
-        <form>
+        <form action="" method="POST">
             <!-- marcando o radio, será identificado como a alternativa correta inserida pelo aluno -->
             <div>
-                <h4 class="questoes">De onde é a invenção do chuveiro elétrico ?</h4>
+                <?php
+                foreach ($lista as &$item) {
+                    echo "<h4 class='questoes'>" . $item['questao'] . "</h4>";
+                    break;
+                }
+                unset($item);
+                ?>
             </div>
             <div>
                 <br>
                 <div>
                     <ul style="list-style-type: none">
 
-                        <li>
-                            <label><input type="number" min="0" max="5" id="frase-id0" value="0" oninput="numericUpDown()" onkeydown="return false">A -
-                                <span>França.</span>
-                        </li>
-
-                        <li>
-                            <label><input type="number" min="0" max="5" id="frase-id1" value="0" oninput="numericUpDown()" onkeydown="return false"> B -
-                                <span>Inglaterra.</span>
-                        </li>
-                        <li>
-                            <label><input type="number" min="0" max="5" id="frase-id2" value="0" oninput="numericUpDown()" onkeydown="return false"> C -
-                                <span>Brasil.</span>
-                        </li>
-
-                        <li>
-                            <label><input type="number" min="0" max="5" id="frase-id3" value="0" oninput="numericUpDown()" onkeydown="return false"> D -
-                                <span>Austrália.</span>
-                        </li>
-                        <li>
-                            <label><input type="number" min="0" max="5" id="frase-id4" value="0" oninput="numericUpDown()" onkeydown="return false"> E -
-                                <span>Alemanha.</span>
-                        </li>
+                        <?php
+                        foreach ($lista as &$item) {
+                            echo "<li><label><input type='number' min='0' max='5' id='frase-id0' value='0' oninput='numericUpDown()' onkeydown='return false'>A - <span>" . $item['alternativa'] . "</span></li>";
+                        }
+                        unset($item);
+                        ?>
 
                     </ul>
 
@@ -109,7 +100,7 @@ $id_sala_jogo = $_SESSION['id_sala_jogo'];
 
                     <div class="group" id="btn" style="text-align: center">
 
-                        <a href="tela-jogo.html" class="button btn btn-primary">Enviar</a>
+                        <button name='submitresp' type="submit" class="button btn btn-primary">Enviar</button>
                         <a href="index.html" class="button btn btn-primary " role="button" aria-pressed="true">Voltar</a>
                     </div><br>
 
@@ -138,13 +129,21 @@ $id_sala_jogo = $_SESSION['id_sala_jogo'];
             </section>
         </div>
 
-
+        <script>
+            function numericUpDown() {
+                var i = 0;
+                var o = 0;
+                for (i; i < 5; i++) {
+                    o += parseInt($("#frase-id" + i).val());
+                    if (o > 5) {
+                        event.target.value -= 1;
+                        o = 0;
+                    }
+                }
+            }
+        </script>
 
     </div>
-
-    <script src="js/jquery.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/placar.js"></script>
 
 </body>
 

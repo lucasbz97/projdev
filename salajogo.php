@@ -17,6 +17,7 @@ if (isset($_POST['submitsala'])) {
         }
     }
 }
+$_SESSION['ID_JOGO_ALTERNATIVA'] = 0;
 ?>
 <!DOCTYPE html>
 <html>

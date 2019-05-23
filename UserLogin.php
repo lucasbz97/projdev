@@ -53,7 +53,7 @@ if (isset($_SESSION['usuario_logado'])) {
 
 
     <!-- ratios de transição entre logar e cadastrar -->
-    <div class="principal">
+    <div class="principal" style="margin-top:-45px">
         <div class="login-html">
             <input required id="tab-1" type="radio" name="tab" class="logar" checked>
             <label for="tab-1" class="tab">Fazer login</label>

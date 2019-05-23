@@ -1,3 +1,9 @@
+<?php
+session_start();
+require 'class/SalaDAO.php';
+
+//if($_POST[''])
+?>
 <!DOCTYPE html>
 <html>
 
@@ -10,7 +16,7 @@
     <link rel="stylesheet" href="css/estilo.css">
 
     <link rel="icon" href="img/oculos_barba.jpg">
-    
+
     <?php
 
     // require 'questoes.php';
@@ -25,18 +31,17 @@
     // } else {
     //     echo "Falha na gravacao";
     // }
-    
+
     ?>
-    
+
 </head>
 
-<body class="fadeIn">
+<body class="fadeIn" style="overflow:auto">
     <!-- Menu com bootstrap -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
         <a class="navbar-brand" href="#">SubDev's</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -51,14 +56,14 @@
                 <div class="dropdown" id="dropId">
                     <button onclick="dropDown()" class="dropbtn">Menu</button>
                     <div id="myDropdown" class="dropdown-content">
-                        <a href="index.html">Home</a    >
+                        <a href="index.html">Home</a>
                         <a href="tela-jogo.html">Tela Jogo</a>
                     </div>
                 </div>
             </ul>
         </div>
     </nav>
-    <div class="principal">
+    <div class="principal" style="margin-top:20px">
         <h4 style="text-align: center">Cadastro questões</h4>
         <form>
             <div class="form-group">
@@ -68,7 +73,7 @@
 
                 <!-- marcando o radio, será identificado como a alternativa correta inserida pelo professor -->
 
-                
+
                 <input id="id-radio" type="radio" name="alternativa" value="sim" /> A
                 <input id="text" type="text" class="form-control" name="texto">
                 <br />
@@ -85,10 +90,10 @@
                 <input id="text" type="text" class="form-control" name="texto">
                 <br />
                 <div class="group" id="btn" style="text-align: center">
-                    <a href="cadastro.html" class="button btn btn-primary">Salvar</a><t></t>
-                    <a href="index.html" class="button btn btn-primary " role="button" aria-pressed="true">Voltar</a>
+                    <button name="S" type="submit" class="button btn btn-primary">Salvar</button>
+                    <a href="Userpage.php" class="button btn btn-primary " role="button" aria-pressed="true">Voltar</a>
                 </div>
-                
+
             </div>
         </form>
     </div>

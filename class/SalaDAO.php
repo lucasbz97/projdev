@@ -12,25 +12,25 @@ class SalaDAO
 
     public function BuscarSalas($id_usua)
     {
-        $comm_query = "select ID_SALA,NOME_SALA from SALA where SALA_USUA_ID = ?";
+        $comm_query = "select ID_SALA,NOME_SALA,NR_SALA from SALA where SALA_USUA_ID = ?";
 
         $stm = mysqli_prepare($this->con, $comm_query);
-        $stm->bind_param('s', $id_usua);
+        $stm->bind_param('i', $id_usua);
         $stm->execute();
 
-        $stm->bind_result($result_id, $result_nome);
+        $stm->bind_result($result_id, $result_nome,$result_nr);
         $stm->store_result();
         $cont = 0;
         $lista_salas = [];
         while ($stm->fetch()) {
-            $lista_salas[$cont] = array("id" => $result_id, "nome" => $result_nome);
+            $lista_salas[$cont] = array("id" => $result_id, "nome" => $result_nome,"nr"=>$result_nr);
             $cont++;
         }
 
         if ($cont = 1) {
             return $lista_salas;
         }
-        return null;
+        return nulla;
     }
 
     public function BuscarSalasJogo($nr)
@@ -69,24 +69,26 @@ class SalaDAO
         return null;
     }
 
-    // public function Inserir($novo)
-    // {
-    //     if ($this->VerificaUsua($novo->getEmail(), $novo->getUsuario()) == 0) {
-    //         $comm_insert = "insert into usuario (NOME_USUA,EMAIL_USUA,SENHA_USUA) values(?,?,?)";
-    //         $nome = $novo->getUsuario();
-    //         $email = $novo->getEmail();
-    //         $senha = $novo->getSenha();
+    public function InserirSala($novo)
+    {
+        //if ($this->VerificaUsua($novo->getEmail(), $novo->getUsuario()) == 0) {
+        
 
-    //         $stm = mysqli_prepare($this->con, $comm_insert);
-    //         $stm->bind_param('sss', $nome, $email, $senha);
-    //         $stm->execute();
-    //         unset($_SESSION['usuario_logado']);
-    //         //header("location: UserLogin.php");
-    //         return 1;
-    //     } else {
-    //         return 0;
-    //     }
-    // }
+        $comm_insert = "insert into sala (NOME_SALA,SALA_USUA_ID,NR_SALA) values(?,?,?)";
+        $nome = $novo->getNome_SALA();
+        $id_usua = $novo->getID_Usuario();
+        $nrsala = $novo->getID_Usuario() . mt_rand();
+
+        $stm = mysqli_prepare($this->con, $comm_insert);
+        $stm->bind_param('sis', $nome, $id_usua, $nrsala);
+        $stm->execute();
+        //unset($_SESSION['usuario_logado']);
+        //header("location: UserPage.php");
+        //return 1;
+        //} else {
+        //  return 0;
+        //}
+    }
 
     // public function VerificaUsua($email, $nome)
     // {

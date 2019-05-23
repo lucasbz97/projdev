@@ -26,7 +26,7 @@
     // } else {
     //     echo "Falha na gravacao";
     // }
-    
+
     ?>
     <!-- <form action="bdo.php" method="POST">
         <input type="submit" value="aaaa vai"/>
@@ -38,8 +38,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
         <a class="navbar-brand" href="#">SubDev's</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -62,8 +61,7 @@
             </ul>
         </div>
     </nav>
-
-    <div class="principal" id="vai">
+    <div class="principal" id="vai" style="min-height:200px">
         <img class="col-md-12" src="img/oculos_barba.jpg" alt="Logo" />
         <h2 class="nome-logo col-md-12">SubDev's</h2>
         <div class="button-h" id="btn">
@@ -73,18 +71,18 @@
         </div>
     </div>
 
-    <script src="js/main.js"></script>
-
     <footer>
-            <div class="icones-redes-sociais">
-                        © 2019 Copyright: SubDev's<br><br>
-                    <a href="https://github.com"><img src="https://img.icons8.com/material-outlined/52/000000/github.png"></a>
+        <div class="icones-redes-sociais">
+            © 2019 Copyright: SubDev's<br><br>
+            <a href="https://github.com"><img src="https://img.icons8.com/material-outlined/52/000000/github.png"></a>
 
-                    <a href="https://twitter.com"><img src="https://img.icons8.com/color/48/000000/twitter.png"></a>
+            <a href="https://twitter.com"><img src="https://img.icons8.com/color/48/000000/twitter.png"></a>
 
-                    <a href="https://linkedin.com"><img src="https://img.icons8.com/color/52/000000/linkedin.png"></a>
-            </div>
+            <a href="https://linkedin.com"><img src="https://img.icons8.com/color/52/000000/linkedin.png"></a>
+        </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>

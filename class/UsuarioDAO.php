@@ -10,18 +10,24 @@ class UsuarioDAO
         }
     }
 
-    public function Select($email)
-    {
-        $comm = "select EMAIL_USUA from USUARIO where EMAIL_USUA = ?";
-        if (!($stm = mysqli_prepare($this->con, $comm))) {
-            echo "Prepare failed: (" . $this->con->errno . ") " . $this->con->error;
-        }
-        $stm->bind_param('s', $email);
+    public function Login($login){
+        $nome = $login->getUsuario();
+        $senha = $login->getSenha();
+
+        $comm_query = "select top 1 NOME_USUA,SENHA_USUA from USUARIO where NOME_USUA = ? AND SENHA_USUA = ?";
+
+        $stm = mysqli_prepare($this->con,$comm_query);
+        $stm->bind_param('ss',$nome,$senha);
         $stm->execute();
 
-        $stm->bind_result($getemail);
-        while ($stm->fetch()) {
-            return 1;
+        $result = $stm->bind_result($result_nome,$result_senha);
+
+
+
+        while($stm->fetch()){
+            if($nome == $result_nome && $senha == $result_senha){
+                return 1;
+            }
         }
         return 0;
     }
@@ -41,5 +47,21 @@ class UsuarioDAO
             return "alerterror";
         }
         return "alertsuccess";
+    }
+
+    public function Select($email)
+    {
+        $comm = "select EMAIL_USUA from USUARIO where EMAIL_USUA = ?";
+        if (!($stm = mysqli_prepare($this->con, $comm))) {
+            echo "Prepare failed: (" . $this->con->errno . ") " . $this->con->error;
+        }
+        $stm->bind_param('s', $email);
+        $stm->execute();
+
+        $stm->bind_result($getemail);
+        while ($stm->fetch()) {
+            return 1;
+        }
+        return 0;
     }
 }

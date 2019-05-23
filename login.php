@@ -57,25 +57,27 @@
             <!-- Login de usuário -->
             <div class="login-form">
                 <div class="logar-htm">
-                    <div class="group">
-                        <label for="user" class="label">Nome de usuário</label>
-                        <input required id="user" type="text" class="input">
-                    </div>
-                    <div class="group">
-                        <label for="pass" class="label">Senha</label>
-                        <input required id="pass" type="password" class="input" data-type="password">
-                    </div>
-                    <div class="group">
-                        <input required id="check" type="checkbox" class="check" checked>
-                        <label for="check"><span class="icon"></span> Mantenha-me conectado</label>
-                    </div>
-                    <div class="group" id="btn">
-                        <button type="button" class="button btn btn-primary">Entrar</button><br>
-                        <a href="index.html" class="button btn btn-primary " role="button" aria-pressed="true">Voltar</a>
-                    </div>
-                    <div class="foot-lnk">
-                        <a href="#esqueceu">Esqueceu a senha?</a>
-                    </div>
+                    <form action="userpage.php" method="post">
+                        <div class="group">
+                            <label for="user" class="label">Nome de usuário</label>
+                            <input name="username" required id="user" type="text" class="input">
+                        </div>
+                        <div class="group">
+                            <label for="pass" class="label">Senha</label>
+                            <input name="password" required id="pass" type="password" class="input" data-type="password">
+                        </div>
+                        <div class="group">
+                            <input required id="check" type="checkbox" class="check" checked>
+                            <label for="check"><span class="icon"></span> Mantenha-me conectado</label>
+                        </div>
+                        <div class="group" id="btn">
+                            <input type="submit" class="button btn btn-primary" value="Entrar"><br>
+                            <a href="index.html" class="button btn btn-primary " role="button" aria-pressed="true">Voltar</a>
+                        </div>
+                        <div class="foot-lnk">
+                            <a href="#esqueceu">Esqueceu a senha?</a>
+                        </div>
+                    </form>
                 </div>
 
 
@@ -136,14 +138,6 @@
         echo "</script>";
     }
     ?>
-
-    <footer>
-        <!-- Rodapé da pagina -->
-        <div class="footer-copyright text-center py-3" id="rodape">
-            © 2019 Copyright: SubDev's
-        </div>
-
-    </footer>
 
     <script type="text/javascript" src="js/main.js"></script>
 </body>

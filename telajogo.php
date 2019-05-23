@@ -1,5 +1,20 @@
 <?php
 session_start();
+include(jogo.php);
+//
+If(isset($_POST['submitresp'])){
+$respostas = New jogoControle($_POST['checked']););
+}else if(isset($_POST[submitnrsala])){
+$salaid= $_SESSION['id_sala_jogo];
+$lista_perguntas= new PerguntasDAO($salaid);
+Foreach($lista_perguntas as &$item){
+$item['alternativa'];
+$item['checked'];
+}
+$item['questao'];
+unset($item);
+}
+//
 $id_sala_jogo = $_SESSION['id_sala_jogo'];
 ?>
 <!DOCTYPE html>
